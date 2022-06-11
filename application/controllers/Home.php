@@ -6,6 +6,10 @@ class Home extends CI_Controller
   {
     parent::__construct();
     $this->load->library('form_validation');
+    $Access = $this->db->get_where('user', array('email' => $this->session->userdata('email')))->row_array();
+    if (!$Access) {
+      redirect('Login');
+    }
   }
   public function index()
   {

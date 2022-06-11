@@ -1,5 +1,5 @@
-﻿# Host: localhost  (Version 5.5.5-10.1.38-MariaDB)
-# Date: 2022-06-09 08:28:45
+﻿# Host: localhost  (Version 5.5.5-10.4.22-MariaDB)
+# Date: 2022-06-11 23:44:48
 # Generator: MySQL-Front 6.0  (Build 2.20)
 
 
@@ -98,3 +98,23 @@ CREATE TABLE `tarif` (
 # Data for table "tarif"
 #
 
+
+#
+# Structure for table "user"
+#
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama_lengkap` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `konfirpassword` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
+
+#
+# Data for table "user"
+#
+
+INSERT INTO `user` VALUES (9,'Fery Richardo','feryricardho@gmail.com','$2y$10$d92PUot55BwnQsC7Khl5nelfoI/F.mPxaxjylNq.yQko3Z10PDryi','$2y$10$bul6rrAE3RFNaniYOALXBO9HPkNUZ76GrnMVQp4R1.thsIMnh6T3W'),(10,'Iqbal Sonata','iqbalsonata2@gmail.com','$2y$10$qWNZH7TiQTrxCCraIEx10eLZk3Xt/NGFVGcm.yp0jjrq4/CqgpM0K','$2y$10$e7nOdwRMTQFRPZDFy7nzZerKznqbIrkBFzHhojsK0iQy9NdBRbLs2');
