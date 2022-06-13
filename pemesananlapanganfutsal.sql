@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.5.5-10.4.22-MariaDB)
-# Date: 2022-06-11 23:44:48
+# Date: 2022-06-13 12:54:26
 # Generator: MySQL-Front 6.0  (Build 2.20)
 
 
@@ -12,13 +12,18 @@ CREATE TABLE `lapangan` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `lnama` varchar(20) DEFAULT NULL,
   `lkode` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `ljenis` varchar(255) DEFAULT NULL,
+  `ltersedia` varchar(255) DEFAULT NULL,
+  `gambar` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`Id`),
+  KEY `lkode` (`lkode`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 #
 # Data for table "lapangan"
 #
 
+INSERT INTO `lapangan` VALUES (1,'Lapangan Satu','L1','Karpet','1','1.jpg'),(2,'Lapangan Dua','L2','Rumput Sintetis','1','2.jpeg'),(8,'lapangan tiga','l3','kayu jati','1','WhatsApp_Image_2022-06-13_at_10_20_01_AM3.jpeg'),(9,'Lapangan Empat','l4','Karpet','1','WhatsApp_Image_2022-06-13_at_10_20_01_AM_(1)2.jpeg');
 
 #
 # Structure for table "pelanggan"
@@ -110,11 +115,12 @@ CREATE TABLE `user` (
   `email` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   `konfirpassword` varchar(255) DEFAULT NULL,
+  `gambar` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
 
 #
 # Data for table "user"
 #
 
-INSERT INTO `user` VALUES (9,'Fery Richardo','feryricardho@gmail.com','$2y$10$d92PUot55BwnQsC7Khl5nelfoI/F.mPxaxjylNq.yQko3Z10PDryi','$2y$10$bul6rrAE3RFNaniYOALXBO9HPkNUZ76GrnMVQp4R1.thsIMnh6T3W'),(10,'Iqbal Sonata','iqbalsonata2@gmail.com','$2y$10$qWNZH7TiQTrxCCraIEx10eLZk3Xt/NGFVGcm.yp0jjrq4/CqgpM0K','$2y$10$e7nOdwRMTQFRPZDFy7nzZerKznqbIrkBFzHhojsK0iQy9NdBRbLs2');
+INSERT INTO `user` VALUES (10,'Iqbal Sonata','iqbalsonata2@gmail.com','$2y$10$qWNZH7TiQTrxCCraIEx10eLZk3Xt/NGFVGcm.yp0jjrq4/CqgpM0K','$2y$10$e7nOdwRMTQFRPZDFy7nzZerKznqbIrkBFzHhojsK0iQy9NdBRbLs2','profile.png'),(11,'Fery Richardo','feryricardo@gmail.com','$2y$10$RzYbg1S2P2/4ezlVmV9OjObgA2z/xThp.yQ3qs8R.6VcFdld4WnNa','$2y$10$.j6f65b2zLCKmMpfXckcoe1q573PPw0iuzFLewWbvbeEpbwpm.tKu','profile.png');
