@@ -8,11 +8,11 @@ class DB_Futsal extends CI_Model
       'nama_lengkap' => $this->input->post('nama_lengkap', true),
       'email' => $this->input->post('email', true),
       'password' => password_hash($this->input->post('password', true), PASSWORD_DEFAULT),
-      'konfirpassword' => password_hash($this->input->post('konfirpassword', true), PASSWORD_DEFAULT)
+      'konfirpassword' => password_hash($this->input->post('konfirpassword', true), PASSWORD_DEFAULT),
+      'gambar' => 'profile.png'
     ];
     $this->db->insert('user', $data);
   }
-
   public function getCourts()
   {
     return $this->db->get('lapangan')->result();
