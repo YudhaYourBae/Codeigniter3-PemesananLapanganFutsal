@@ -12,3 +12,4 @@ if(Alert){
 }else if(Alert3){
   swal("Anda Berhasil Logout.","", "info");
 }
+

@@ -12,6 +12,10 @@ class Login extends CI_Controller
 
   public function index()
   {
+    $access = $this->db->get_where('user', array('email' => $this->session->userdata('email')))->row_array();
+    if ($access) {
+      redirect('Home');
+    }
     $data = [
       'Title' => 'Login - ',
       'SubTitle' => 'Rafhely'
@@ -49,6 +53,10 @@ class Login extends CI_Controller
 
   public function Pendaftaran()
   {
+    $access = $this->db->get_where('user', array('email' => $this->session->userdata('email')))->row_array();
+    if ($access) {
+      redirect('Home');
+    }
     $data = [
       'Title' => 'Pendaftaran - ',
       'SubTitle' => 'Rafhely'
